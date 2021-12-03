@@ -30,3 +30,18 @@ document.getElementById('key-pad').addEventListener("click", function(event){
     }
 
 })
+
+
+document.getElementById("submit-btn").addEventListener("click", function(){
+  const pin=document.getElementById('display-pin').value; 
+  const typedNumber=document.getElementById("typed-numbers").value;   
+  const notifyYes=document.getElementById('notify-yes');
+  const notifyNot=document.getElementById('notify-not');
+  if(pin==typedNumber){ 
+    notifyYes.style.display="block";
+    notifyNot.style.display="none";
+  }else{ 
+    notifyNot.style.display="block";
+    notifyYes.style.display="none";
+  }
+});
